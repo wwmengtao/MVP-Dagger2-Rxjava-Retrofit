@@ -16,7 +16,7 @@ import java.util.Collection;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 public class UserListFragment extends BaseFragment<UserListPresenter> implements UserListView {
     @Inject
     UsersAdapter usersAdapter;
-    @Bind(R.id.rv_users)
+    @BindView(R.id.rv_users)
     RecyclerView rv_users;
     private UsersAdapter.OnItemClickListener onItemClickListener =
             new UsersAdapter.OnItemClickListener() {

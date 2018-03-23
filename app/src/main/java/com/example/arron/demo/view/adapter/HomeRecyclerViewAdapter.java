@@ -10,20 +10,20 @@ import com.example.arron.demo.view.component.MainPageItemView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 
 /**
  * Created by Arron on 16/6/30.
  */
 public class HomeRecyclerViewAdapter extends BaseMultiItemQuickAdapter<HomeEntity> {
-    @Bind(R.id.home_item_1)
+    @BindView(R.id.home_item_1)
     MainPageItemView item1;
-    @Bind(R.id.home_item_2)
+    @BindView(R.id.home_item_2)
     MainPageItemView item2;
-    @Bind(R.id.home_item_3)
+    @BindView(R.id.home_item_3)
     MainPageItemView item3;
-    @Bind(R.id.home_item_4)
+    @BindView(R.id.home_item_4)
     MainPageItemView item4;
 
     public HomeRecyclerViewAdapter(List<HomeEntity> data) {

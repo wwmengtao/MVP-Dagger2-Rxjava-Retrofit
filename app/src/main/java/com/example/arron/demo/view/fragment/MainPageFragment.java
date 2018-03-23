@@ -15,7 +15,7 @@ import com.example.arron.demo.view.base.BaseFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
  * Created by Arron on 16/6/29.
  */
 public class MainPageFragment extends BaseFragment {
-    @Bind(R.id.container)
+    @BindView(R.id.container)
     RecyclerView container;
     private List<HomeEntity> mData = new ArrayList<HomeEntity>();
     private HomeRecyclerViewAdapter adapter;

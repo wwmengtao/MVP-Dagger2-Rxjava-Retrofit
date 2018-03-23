@@ -12,7 +12,7 @@
     import com.example.arron.demo.view.base.AppActivity;
     import com.example.arron.demo.view.base.BaseFragment;
 
-    import butterknife.Bind;
+    import butterknife.BindView;
     import butterknife.ButterKnife;
 
     /**
@@ -20,9 +20,9 @@
      */
 
     public class HomeActivity extends AppActivity {
-        @Bind(R.id.home_content)
+        @BindView(R.id.home_content)
         ViewPager container;
-        @Bind(R.id.tab)
+        @BindView(R.id.tab)
         TabLayout tab;
         private HomeFragmentAdapter adapter;
 

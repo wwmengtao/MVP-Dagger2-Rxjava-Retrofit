@@ -12,7 +12,7 @@ import com.example.arron.demo.view.UserDetailsView;
 import com.example.arron.demo.view.base.BaseFragment;
 import com.example.arron.demo.view.component.AutoLoadImageView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -20,15 +20,15 @@ import butterknife.ButterKnife;
  */
 public class UserDetailFragment extends BaseFragment<UserDetailPresenter> implements UserDetailsView {
 
-    @Bind(R.id.iv_cover)
+    @BindView(R.id.iv_cover)
     AutoLoadImageView iv_cover;
-    @Bind(R.id.tv_fullname)
+    @BindView(R.id.tv_fullname)
     TextView tv_fullname;
-    @Bind(R.id.tv_email)
+    @BindView(R.id.tv_email)
     TextView tv_email;
-    @Bind(R.id.tv_followers)
+    @BindView(R.id.tv_followers)
     TextView tv_followers;
-    @Bind(R.id.tv_description)
+    @BindView(R.id.tv_description)
     TextView tv_description;
 
     private String userId;

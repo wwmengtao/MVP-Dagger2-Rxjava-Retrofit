@@ -15,6 +15,7 @@
     import java.util.List;
 
     import butterknife.ButterKnife;
+    import butterknife.Unbinder;
 
 
     /**
@@ -24,6 +25,7 @@
     public abstract class BaseFragment<T extends Presenter> extends RxFragment implements BaseView {
         //与Fragment绑定的activity对象
         protected BaseActivity mActivity;
+        protected Unbinder mUnbinder = null;
         //当前View的Presenter
         protected T mPresenter;
         private View contentView;
@@ -91,6 +93,7 @@
                 mVaryViewHelperController = new VaryViewHelperController(getLoaingTargetView());
             if (null == mPresenter)
                 mPresenter = getChildPresenter();
+            mUnbinder = ButterKnife.bind(contentView);
             return contentView;
         }
 
@@ -129,7 +132,7 @@
         @Override
         public void onDestroy() {
             super.onDestroy();
-            ButterKnife.unbind(this);
+            mUnbinder.unbind();
             if (null != mPresenter)
                 mPresenter.destroy();
         }
